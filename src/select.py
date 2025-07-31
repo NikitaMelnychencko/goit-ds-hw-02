@@ -267,31 +267,31 @@ def select_all_users(cur: sqlite3.Cursor):
 if __name__ == "__main__":
     with sqlite3.connect("task.db") as con:
         cur = con.cursor()
-        # print("tasks:")
-        # tasks = select_task_by_id(cur, 2)
-        # print(tasks)
+        print("tasks:")
+        tasks = select_task_by_id(cur, 2)
+        print(tasks)
 
-        # print("tasks by status:")
-        # tasks_by_status = select_task_by_status(cur, 1)
-        # print(tasks_by_status)
+        print("tasks by status:")
+        tasks_by_status = select_task_by_status(cur, 1)
+        print(tasks_by_status)
 
-        # uncompleted_task = select_task_with_uncompleted(cur)
-        # print(uncompleted_task)
+        uncompleted_task = select_task_with_uncompleted(cur)
+        print(uncompleted_task)
 
-        # user_by_email = select_user_by_email_pattern(cur, "%@example.org")
-        # print(user_by_email)
+        user_by_email = select_user_by_email_pattern(cur, "%@example.org")
+        print(user_by_email)
 
-        # task_by_group = select_task_count_by_group_from_status(cur)
-        # print(task_by_group)
+        task_by_group = select_task_count_by_group_from_status(cur)
+        print(task_by_group)
 
-        # tasks_by_email = select_task_by_email_user_pattern(cur, "%@example.org")
-        # print(tasks_by_email)
+        tasks_by_email = select_task_by_email_user_pattern(cur, "%@example.org")
+        print(tasks_by_email)
 
-        # tasks_with_out_description = select_task_with_out_description(cur)
-        # print(tasks_with_out_description)
+        tasks_with_out_description = select_task_with_out_description(cur)
+        print(tasks_with_out_description)
 
-        # data = select_users_with_tasks_by_status(cur, 1)
-        # print(data)
+        data = select_users_with_tasks_by_status(cur, 1)
+        print(data)
 
         user = select_all_users(cur)
         print(user)

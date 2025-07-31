@@ -48,5 +48,5 @@ def update_user_name(conn: sqlite3.Connection, fullName: str, id: int):
 
 if __name__ == "__main__":
     with sqlite3.connect("task.db") as con:
-        # update_task(con, 1, 3)
+        update_task(con, 1, 3)
         update_user_name(con, "New User Name", 1)
